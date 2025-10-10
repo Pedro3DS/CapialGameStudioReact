@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+/* app/globals.css */
+#backVideo::-webkit-media-controls {
+  display: none !important;
+}
+#backVideo::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+#backVideo::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
