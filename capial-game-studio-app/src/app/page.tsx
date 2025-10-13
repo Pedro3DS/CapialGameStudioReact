@@ -1,19 +1,41 @@
-import Image from "next/image";
+import Image from 'next/image'
 import VideoBackground from './components/VideoBackground';
 import StickyNavbar from './components/StickyNavbar';
 
 export default function Home() {
   return (
     // <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="relative min-h-[200vh] text-white">
-        <VideoBackground />
-        <div className="relative z-10 flex flex-col items-center justify-center h-screen">
-          <h1 className="text-5xl font-bold drop-shadow-lg">
-            Bem-vindo ao site!
-          </h1>
+    <main className="relative min-h-[200vh] text-white">
+      <VideoBackground />
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen">
+        <h1 className="text-5xl font-bold drop-shadow-lg">
+          Bem-vindo ao site!
+        </h1>
+      </div>
+      <StickyNavbar />
+      <div className="flex bg-black">
+        <h1>About Us</h1>
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Capial logo"
+          width={180}
+          height={180}
+        />
+        <div>
+          <p>A Capial Games é um estúdio indie de desenvolvimento de jogos do Mato Grosso do Sul, fundado por Mauricio de Souza e Gabriel Ferreira Medeiros. Com uma equipe multidisciplinar, o estúdio cria jogos educacionais e culturais que valorizam a identidade regional.
+
+          </p>
+          <p>A Capial Games é um estúdio indie de desenvolvimento de jogos do Mato Grosso do Sul, fundado por Mauricio de Souza e Gabriel Ferreira Medeiros. Com uma equipe multidisciplinar, o estúdio cria jogos educacionais e culturais que valorizam a identidade regional.
+
+          </p>
+          <p>A Capial Games une inovação, educação e cultura para transformar o cenário dos games no Brasil. Nosso objetivo é preservar e divulgar as várias facetas da diversidade cultural do Brasil, não só para o brasileiro mas também para todo o mundo!
+
+          </p>
         </div>
-        <StickyNavbar />
-        {/* <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+
+      </div>
+      {/* <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <Image
             className="dark:invert"
             src="/next.svg"
@@ -108,7 +130,7 @@ export default function Home() {
             Go to nextjs.org →
           </a>
         </footer> */}
-      </main>
+    </main>
     // </div>
   );
 }
