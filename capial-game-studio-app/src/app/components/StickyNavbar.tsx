@@ -11,96 +11,122 @@ export default function StickyNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 500)
-    }
+    const handleScroll = () => setIsSticky(window.scrollY > 200)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
     <motion.nav
-      className={` fixed w-full z-50 transition-all duration-500 ${isSticky ? 'top-0 bg-black/70 backdrop-blur-sm shadow-lg ' : ' bg-black'
-        }`}
-      initial={{ y: 0 }}
+      className={`w-full z-50 transition-all duration-500 ${
+        isSticky
+          ? 'fixed top-0 bg-black/70 backdrop-blur-md shadow-lg'
+          : 'reçative bg-black'
+      }`}
+      initial={{ y: -100 }}
       animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="#" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500">Home</a>
-          <a href="#" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500">About</a>
-          <a href="#" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500">Services</a>
-          <a href="#" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500">Pricing</a>
-          <a href="#" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500">Contact</a>
+        {/* LEFT SIDE — About Us / Projects */}
+        <div className="hidden md:flex items-center space-x-8 text-lg font-medium">
+          <a href="#aboutUs" className="hover:text-amber-400 transition-colors">About Us</a>
+          <a href="#projects" className="hover:text-amber-400 transition-colors">Projects</a>
+        </div>
 
+        {/* CENTER — Logo */}
+        <motion.div
+          className="flex justify-center items-center"
+          animate={{ scale: isSticky ? 0.8 : 1, y: isSticky ? 0 : -8 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Image
+            src={Icon}
+            alt="Capial Logo"
+            priority
+            className="w-20 h-auto cursor-pointer"
+          />
+        </motion.div>
 
-          <div className="flex justify-center items-center py-2">
-            <motion.div
-              className={`h-auto transition-all duration-300 ${isSticky ? 'w-16 translate-y-0' : 'w-24 -translate-y-7'
-                }`}
-            >
-              <Image src={Icon} alt="Capial logo" priority />
-            </motion.div>
-          </div>
+        {/* RIGHT SIDE — Team / Contact + Dropdown */}
+        <div className="hidden md:flex items-center space-x-8 text-lg font-medium">
+          <a href="#team" className="hover:text-amber-400 transition-colors">Team</a>
+          <a href="#contact" className="hover:text-amber-400 transition-colors">Contact</a>
+
           {/* Dropdown */}
-          <div className="relative">
+          <div className="relative ml-6">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="flex items-center px-3 py-2 rounded hover:bg-white/10 transition"
             >
               English (US)
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg
+                className="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
+
             {dropdownOpen && (
-              <ul className={`absolute right-0  mt-2 w-40 bg-white dark:bg-gray-700 rounded shadow-lg py-1 ${isSticky ? "top-full" : "bottom-full"}`}>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">English (US)</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Deutsch</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Italiano</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">中文</a>
-                </li>
+              <ul className="absolute right-0 mt-2 w-40 bg-black/90 backdrop-blur-sm rounded-lg shadow-lg py-2 text-sm">
+                {['English (US)', 'Deutsch', 'Italiano', '中文'].map((lang) => (
+                  <li key={lang}>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-white/10 transition"
+                    >
+                      {lang}
+                    </a>
+                  </li>
+                ))}
               </ul>
             )}
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+          className="md:hidden p-2 rounded hover:bg-white/10 transition"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
 
-
-      {/* Logo */}
-
-
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          <a href="#" className="block text-gray-900 dark:text-white">Home</a>
-          <a href="#" className="block text-gray-900 dark:text-white">About</a>
-          <a href="#" className="block text-gray-900 dark:text-white">Services</a>
-          <a href="#" className="block text-gray-900 dark:text-white">Pricing</a>
-          <a href="#" className="block text-gray-900 dark:text-white">Contact</a>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden flex flex-col items-center bg-black/80 backdrop-blur-sm py-4 space-y-3 text-lg font-medium"
+        >
+          <a href="#aboutUs" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+          <a href="#projects" onClick={() => setMobileMenuOpen(false)}>Projects</a>
+          <a href="#team" onClick={() => setMobileMenuOpen(false)}>Team</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+        </motion.div>
       )}
-
-
     </motion.nav>
   )
 }
