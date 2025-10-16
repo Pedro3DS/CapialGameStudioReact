@@ -26,7 +26,7 @@ export default function StickyNavbar() {
       <div className="max-w-2xl mx-auto flex items-center justify-between px-6 py-2 md:py-0 font-sans transition-all">
 
         {/* Links da esquerda */}
-        <a href="#aboutUs" className={`hover:text-amber-400 transition-all uppercase ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}>
+        <a href="#aboutUs" className={`hover:text-amber-400 transition-all ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}>
           About Us
         </a>
 
@@ -84,7 +84,7 @@ export default function StickyNavbar() {
             src={Icon}
             alt="Capial Logo"
             priority
-            className={`w-25 h-auto cursor-pointer transition-transform ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}
+            className={`w-25 h-auto cursor-pointer transition-transform ${isSticky ? 'translate-y-0' : '-translate-y-3'} `}
           />
         </motion.div>
 
