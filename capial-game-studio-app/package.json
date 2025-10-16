@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindplus/elements": "^1.0.17",
     "framer-motion": "^12.23.22",
+    "gsap": "^3.13.0",
     "jsrepo": "^2.5.0",
+    "motion": "^12.23.24",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
