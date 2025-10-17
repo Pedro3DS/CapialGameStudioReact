@@ -3,14 +3,14 @@ export default function AboutUs() {
   return (
     <section id="aboutUs" className="w-full bg-black text-white py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-4xl font-bold text-center md:text-left mb-8">SOBRE NÓS</h1>
+        <h1 className="text-[20vh] font-bold text-center md:text-left mb-8 uppercase ">SOBRE NÓS</h1>
 
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="w-48 h-48 bg-gray-700 rounded-full"></div>
           </div>
 
-          <div className="w-full md:w-1/2 space-y-4 text-lg">
+          <div className="w-full md:w-1/2 space-y-4 text-lg text-justify">
             <p>
               A Capial Games é um estúdio indie de desenvolvimento de jogos do Mato Grosso do Sul, fundado por
               Mauricio de Souza e Gabriel Ferreira Medeiros. Com uma equipe multidisciplinar, o estúdio cria jogos

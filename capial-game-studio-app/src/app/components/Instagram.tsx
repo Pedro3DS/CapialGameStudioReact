@@ -3,43 +3,81 @@
 import { useEffect } from "react"
 import ScrollVelocity from "../TextAnimations/ScrollVelocity/ScrollVelocity"
 import HoverUnderline from "./HoverUnderline"
+import Image from "next/image"
+import Image1 from "../../../public/GateballBrasilDirect.jpg";
+import Image2 from "../../../public/TwoGirls.jpg";
+import Image3 from "../../../public/TwoGuys.jpg";
+import Image4 from "../../../public/TeamImage.jpg";
+import Image5 from "../../../public/Gamescom 1.jpg";
+import Image6 from "../../../public/Gamescom 2.jpg";
+import Image7 from "../../../public/Gamescom 3.jpg";
+import Image8 from "../../../public/Gamescom 4.jpg";
 
 export default function Instagram() {
 
     return (
         <section id="instagram" className="w-full bg-black text-white">
             <ScrollVelocity
-                texts={['Follow Us', 'On Instagram']}
+                texts={['Follow ✦ Us ✦']}
                 velocity={100}
+                className="custom-scroll-text "
+            />
+            <div className="flex">
+                <Image
+                    src={Image1}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image2}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image3}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image4}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image5}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image6}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image7}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+                <Image
+                    src={Image8}
+                    alt="Capial Logo"
+                    priority
+                    className={`w-50 h-50 cursor-pointer  `}
+                />
+            </div>
+            <ScrollVelocity
+                texts={['On ✦ Instagram ✦']}
+                velocity={100}
+                
                 className="custom-scroll-text"
             />
-            <div className="max-w-6xl mx-auto px-6">
-                <HoverUnderline />
-
-                <div className="flex flex-col md:flex-row items-center gap-10">
-                    {/* <div className="w-full md:w-1/2 flex justify-center">
-                            <div className="w-48 h-48 bg-gray-700 rounded-full"></div>
-                        </div>
-
-                        <div className="w-full md:w-1/2 space-y-4 text-lg">
-                            <p>
-                                A Capial Games é um estúdio indie de desenvolvimento de jogos do Mato Grosso do Sul, fundado por
-                                Mauricio de Souza e Gabriel Ferreira Medeiros. Com uma equipe multidisciplinar, o estúdio cria jogos
-                                educacionais e culturais que valorizam a identidade regional.
-                            </p>
-                            <p>
-                                Apesar das dificuldades de se trabalhar com desenvolvimento de jogos em cidades mais interioranas e
-                                tradicionais como a nossa, o estúdio Capial tem ganhado espaço em editais e oportunidades que vêm
-                                surgindo no estado do agro!
-                            </p>
-                            <p>
-                                A Capial Games une inovação, educação e cultura para transformar o cenário dos games no Brasil. Nosso
-                                objetivo é preservar e divulgar as várias facetas da diversidade cultural do Brasil, não só para o
-                                brasileiro mas também para todo o mundo!
-                            </p>
-                        </div> */}
-                </div>
-            </div>
         </section>
     )
 }
