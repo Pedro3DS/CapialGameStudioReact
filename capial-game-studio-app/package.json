@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindplus/elements": "^1.0.17",
+    "cheerio": "^1.1.2",
     "framer-motion": "^12.23.22",
     "gsap": "^3.13.0",
     "jsrepo": "^2.5.0",

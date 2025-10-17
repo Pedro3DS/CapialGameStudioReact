@@ -1,7 +1,7 @@
 /*
 	Installed from https://reactbits.dev/ts/tailwind/
 */
-
+'use client'
 import React, { ReactNode } from 'react';
 
 interface GradientTextProps {

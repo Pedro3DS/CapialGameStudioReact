@@ -1,3 +1,4 @@
+'use client'
 export default function AboutUs() {
   return (
     <section id="aboutUs" className="w-full bg-black text-white py-16">

@@ -19,60 +19,28 @@ export default function StickyNavbar() {
   return (
     <motion.nav
       className={`w-full z-50 transition-all duration-0 ${isSticky
-          ? 'fixed top-0 bg-gradient-to-t to-black/50 from-[#333333]/50 backdrop-blur-md shadow-lg'
-          : 'relative bg-gradient-to-t from-black to-[#333333]'
+        ? 'fixed top-0 bg-gradient-to-t to-black/50 from-[#333333]/50 backdrop-blur-md shadow-lg'
+        : 'relative bg-gradient-to-t from-black to-[#333333]'
         }`}
     >
       <div className="max-w-2xl mx-auto flex items-center justify-between px-6 py-2 md:py-0 font-sans transition-all">
 
         {/* Links da esquerda */}
-        <a href="#aboutUs" className={`hover:text-amber-400 transition-all ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}>
-          About Us
+        <a href="#aboutUs" className={`selection:bg-amber-600 relative inline-block text-lg font-bold transition-all
+    before:content-[''] before:absolute before:left-0 before:bottom-0
+    before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
+    before:scale-x-0 before:origin-right before:transition-transform before:duration-300
+    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
+          Sobre Nós
+        </a>
+        <a href="#projects" className={`relative inline-block  text-lg font-bold transition-all
+    before:content-[''] before:absolute before:left-0 before:bottom-0
+    before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
+    before:scale-x-0 before:origin-right before:transition-transform before:duration-300
+    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
+          Projetos
         </a>
 
-        {/* DROPDOWN manual */}
-        <div className="relative">
-          <a
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className={`text-white  text-center inline-flex items-center pointer transition-all ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}
-          >
-            Projects
-            <svg
-              className="w-2.5 h-2.5 ml-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
-          </a>
-
-          {dropdownOpen && (
-            <div className="absolute right-0 mt-2 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700/50 dark:divide-gray-600 backdrop-blur-md">
-              <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Gate Ball</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cerrado Vivo</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pantanal Code</a>
-                </li>
-              </ul>
-              <div className="py-2">
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Projects</a>
-              </div>
-            </div>
-          )}
-        </div>
 
         {/* Logo central */}
         <motion.div
@@ -84,17 +52,27 @@ export default function StickyNavbar() {
             src={Icon}
             alt="Capial Logo"
             priority
-            className={`w-25 h-auto cursor-pointer transition-transform ${isSticky ? 'translate-y-0' : '-translate-y-3'} `}
+            className={`w-25 h-auto cursor-pointer transition filter duration-500 ease-in hover:invert ${isSticky ? 'translate-y-0' : '-translate-y-3'} `}
           />
         </motion.div>
 
         {/* Links da direita */}
-        <a href="#team" className={`hover:text-amber-400 transition-all ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}>
-          Team
+        <a href="#team" className={`relative inline-block text-lg font-bold transition-all
+    before:content-[''] before:absolute before:left-0 before:bottom-0
+    before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
+    before:scale-x-0 before:origin-right before:transition-transform before:duration-300
+    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
+          Equipe
         </a>
-        <a href="#contact" className={`hover:text-amber-400 transition-all ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}>
-          Contact
+
+        <a href="#contact" className={`relative inline-block  text-lg font-bold  transition-all
+    before:content-[''] before:absolute before:left-0 before:bottom-0
+    before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
+    before:scale-x-0 before:origin-right before:transition-transform before:duration-300
+    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
+          Contato
         </a>
+
 
         {/* MENU MOBILE */}
         <button
