@@ -9,11 +9,11 @@ import Instagram from './components/Instagram';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen text-white " >
+    <main className="relative min-h-screen text-white font-montserrat" >
       <VideoBackground />
 
       <div className="relative z-10">
-        <section className="flex flex-col md:flex-row items-center justify-center h-[90vh] px-6 md:px-20 bg-gradient-to-t from-[#333333]/100 from-2% to-black/20 backdrop-blur-sm text-white relative">
+        <section className="flex flex-col md:flex-row items-center justify-center h-[75vh] md:h-[88vh] px-6 md:px-20 bg-gradient-to-t from-[#333333]/100 from-2% to-black/20 backdrop-blur-sm text-white relative">
 
           <div className="flex flex-col justify-center w-full md:w-4/5 lg:w-3/4 xl:w-2/3 space-y-6">
             {/* Texto Rotativo Circular */}

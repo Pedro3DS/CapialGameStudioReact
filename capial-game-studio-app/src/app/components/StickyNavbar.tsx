@@ -26,14 +26,14 @@ export default function StickyNavbar() {
       <div className="max-w-2xl mx-auto flex items-center justify-between px-6 py-2 md:py-0 font-sans transition-all">
 
         {/* Links da esquerda */}
-        <a href="#aboutUs" className={`selection:bg-amber-600 relative inline-block text-lg font-bold transition-all
+        <a href="#aboutUs" className={`selection:bg-amber-600 relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
     before:scale-x-0 before:origin-right before:transition-transform before:duration-300
-    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
+    hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'} `}>
           Sobre Nós
         </a>
-        <a href="#projects" className={`relative inline-block  text-lg font-bold transition-all
+        <a href="#projects" className={`relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
     before:scale-x-0 before:origin-right before:transition-transform before:duration-300
@@ -57,7 +57,7 @@ export default function StickyNavbar() {
         </motion.div>
 
         {/* Links da direita */}
-        <a href="#team" className={`relative inline-block text-lg font-bold transition-all
+        <a href="#team" className={`relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
     before:scale-x-0 before:origin-right before:transition-transform before:duration-300
@@ -65,7 +65,7 @@ export default function StickyNavbar() {
           Equipe
         </a>
 
-        <a href="#contact" className={`relative inline-block  text-lg font-bold  transition-all
+        <a href="#contact" className={`relative hidden md:inline-block  text-lg font-bold  transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white
     before:scale-x-0 before:origin-right before:transition-transform before:duration-300

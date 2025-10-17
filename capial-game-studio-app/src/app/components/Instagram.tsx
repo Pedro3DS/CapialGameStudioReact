@@ -1,83 +1,47 @@
 'use client'
 
-import { useEffect } from "react"
-import ScrollVelocity from "../TextAnimations/ScrollVelocity/ScrollVelocity"
-import HoverUnderline from "./HoverUnderline"
 import Image from "next/image"
-import Image1 from "../../../public/GateballBrasilDirect.jpg";
-import Image2 from "../../../public/TwoGirls.jpg";
-import Image3 from "../../../public/TwoGuys.jpg";
-import Image4 from "../../../public/TeamImage.jpg";
-import Image5 from "../../../public/Gamescom 1.jpg";
-import Image6 from "../../../public/Gamescom 2.jpg";
-import Image7 from "../../../public/Gamescom 3.jpg";
-import Image8 from "../../../public/Gamescom 4.jpg";
+import ScrollVelocity from "../TextAnimations/ScrollVelocity/ScrollVelocity"
+import Image1 from "../../../public/GateballBrasilDirect.jpg"
+import Image2 from "../../../public/TwoGirls.jpg"
+import Image4 from "../../../public/TeamImage.jpg"
+import Image5 from "../../../public/Gamescom 1.jpg"
+import Image6 from "../../../public/Gamescom 2.jpg"
+import Image8 from "../../../public/Gamescom 4.jpg"
 
 export default function Instagram() {
+  const images = [Image4, Image5, Image1, Image2, Image6, Image8]
 
-    return (
-        <section id="instagram" className="w-full bg-black text-white">
-            <ScrollVelocity
-                texts={['Follow ✦ Us ✦']}
-                velocity={100}
-                className="custom-scroll-text "
+  return (
+    <section id="instagram" className="w-full bg-black text-white py-16">
+      <ScrollVelocity
+        texts={['Follow ✦ Us ✦']}
+        velocity={100}
+        className="custom-scroll-text"
+      />
+
+      {/* GRID RESPONSIVO (sem scroll) */}
+      <div className="grid grid-cols-3 md:grid-cols-6 w-full h-[40vh]">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className="relative w-full h-full overflow-hidden group"
+          >
+            <Image
+              src={img}
+              alt={`Instagram image ${index + 1}`}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
             />
-            <div className="flex">
-                <Image
-                    src={Image1}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image2}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image3}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image4}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image5}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image6}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image7}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-                <Image
-                    src={Image8}
-                    alt="Capial Logo"
-                    priority
-                    className={`w-50 h-50 cursor-pointer  `}
-                />
-            </div>
-            <ScrollVelocity
-                texts={['On ✦ Instagram ✦']}
-                velocity={100}
-                
-                className="custom-scroll-text"
-            />
-        </section>
-    )
+          </div>
+        ))}
+      </div>
+
+      <ScrollVelocity
+        texts={['On ✦ Instagram ✦']}
+        velocity={100}
+        className="custom-scroll-text"
+      />
+    </section>
+  )
 }
