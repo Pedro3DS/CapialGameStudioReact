@@ -5,11 +5,13 @@ import AboutUs from './components/AboutUs';
 import RotatingText from './TextAnimations/RotatingText/RotatingText';
 import GradientText from './TextAnimations/GradientText/GradientText';
 import Instagram from './components/Instagram';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen text-white font-montserrat" >
+    <main className="relative min-h-screen text-white font-montserrat selection:bg-amber-600" >
       <VideoBackground />
 
       <div className="relative z-10">
@@ -19,7 +21,7 @@ export default function Home() {
             {/* Texto Rotativo Circular */}
             <RotatingText
               texts={['Bem-Vindo!', 'Welcome!', '¡Bienvenido!', 'Bienvenue!']}
-              mainClassName="text-5xl font-bold bg-[#333333]/50 text-white px-4 py-2 rounded-lg inline-block"
+              mainClassName="text-5xl font-bold text-white py-2 rounded-lg inline-block"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -60,8 +62,8 @@ export default function Home() {
                     viewBox="0 0 16 16"
                     className="bi bi-instagram transform transition-transform duration-300 hover:scale-125 hover:text-linear-65 from-purple-500 to-pink-500"
                     fill="currentColor"
-                    height="40"
-                    width="40"
+                    height="30"
+                    width="30"
                     xmlns="http://www.w3.org/2000/svg"
 
                   >
@@ -79,10 +81,10 @@ export default function Home() {
                   target='_blank'>
                   <svg
                     viewBox="0 0 16 16"
-                    className="bi bi-youtube transform transition-transform duration-300 hover:scale-125 hover:text-linear-65 from-purple-500 to-pink-500"
+                    className="bi bi-youtube transform transition-transform duration-300 hover:scale-125 hover:text-pink-500"
                     fill="currentColor"
-                    height="40"
-                    width="40"
+                    height="30"
+                    width="30"
                     xmlns="http://www.w3.org/2000/svg"
 
                   >
@@ -109,8 +111,10 @@ export default function Home() {
         <AboutUs />
 
         <Instagram />
-        <AboutUs />
-        <AboutUs />
+        <Projects/>
+        <Footer/>
+        {/* <AboutUs />
+        <AboutUs /> */}
       </div>
     </main>
   );

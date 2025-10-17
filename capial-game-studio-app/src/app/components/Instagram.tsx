@@ -15,7 +15,7 @@ export default function Instagram() {
   return (
     <section id="instagram" className="w-full bg-black text-white py-16">
       <ScrollVelocity
-        texts={['Follow ✦ Us ✦']}
+        texts={['Follow ✦ Us ✦ Follow ✦ Us ✦ Follow ✦ Us ✦']}
         velocity={100}
         className="custom-scroll-text"
       />
@@ -38,7 +38,7 @@ export default function Instagram() {
       </div>
 
       <ScrollVelocity
-        texts={['On ✦ Instagram ✦']}
+        texts={['On ✦ Instagram ✦ On ✦ Instagram ✦ On ✦ Instagram ✦']}
         velocity={100}
         className="custom-scroll-text"
       />
