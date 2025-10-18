@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-montserrat: "Montserrat", sans-serif; 
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,4 +25,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 4px;
+  /* altura da barra horizontal */
+}
+
+/* Trilho (fundo da scrollbar) */
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  /* cor de fundo */
+  border-radius: 10px;
+}
+
+/* Parte que se move (o "thumb") */
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #f59e0b, #b45309);
+  /* gradiente âmbar */
+  border-radius: 10px;
+}
+
+/* Quando passa o mouse */
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #fbbf24, #d97706);
 }
