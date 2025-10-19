@@ -28,8 +28,8 @@ export default function Instagram() {
     <section id="instagram" className="w-full bg-black text-white py-16">
       <ScrollVelocity
         texts={[t.scrollText1]}
-        velocity={100}
-        className="custom-scroll-text"
+        velocity={50}
+        className="custom-scroll-text text-xl mb-2"
       />
 
       {/* GRID RESPONSIVO (sem scroll) */}
@@ -67,8 +67,9 @@ export default function Instagram() {
 
       <ScrollVelocity
         texts={[t.scrollText2]}
-        velocity={100}
-        className="custom-scroll-text"
+        velocity={50}
+        
+        className="custom-scroll-text text-xl mb-2 mt-2"
       />
     </section>
   )
