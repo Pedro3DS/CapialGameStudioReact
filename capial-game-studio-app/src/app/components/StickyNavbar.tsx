@@ -78,7 +78,7 @@ export default function StickyNavbar() {
         <a href="#team" className={`relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
-    before:scale-x-50 before:origin-right before:transition-transform before:duration-300
+    before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
           {t.text3}
         </a>
@@ -86,7 +86,7 @@ export default function StickyNavbar() {
         <a href="#contact" className={`relative hidden md:inline-block  text-lg font-bold  transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
-    before:scale-x-50 before:origin-right before:transition-transform before:duration-300
+    before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'} `}>
           {t.text4}
         </a>

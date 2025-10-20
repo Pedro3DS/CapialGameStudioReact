@@ -27,7 +27,7 @@ export const texts: Record<Idioma, any> = {
       button: "Saiba Mais",
     },
     instagram: {
-      scrollText1: "Sigam-Nos ✦ Sigam-Nos ✦ Sigam-Nos ✦",
+      scrollText1: "Nosso Instagram ✨ Nosso Instagram ✨ Nosso Instagram ✨ Nosso Instagram ✨ ",
       scrollText2: "No ✦ Instagram ✦ No ✦ Instagram ✦ No ✦ Instagram ✦",
     },
     team: {
