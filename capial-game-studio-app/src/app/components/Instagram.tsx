@@ -33,7 +33,7 @@ export default function Instagram() {
       />
 
       {/* GRID RESPONSIVO (sem scroll) */}
-      <div className="grid grid-cols-3 md:grid-cols-6 w-full h-[40vh]">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-full h-[35vh]">
         {images.map((img, index) => (
           <div
             key={index}
@@ -43,14 +43,14 @@ export default function Instagram() {
               href={links[index]}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute inset-0 bg-transparent backdrop-blur-sm flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-800 z-10"
+              className="absolute inset-0 bg-transparent backdrop-blur-sm flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-800 z-10 "
             >
               <Image
                 src={InstagramIcon}
                 alt="Instagram"
                 width={60}
                 height={60}
-                className=""
+                className="rounded-2xl"
               />
             </a>
 
@@ -59,7 +59,7 @@ export default function Instagram() {
               src={img}
               alt={`Instagram image ${index + 1}`}
               fill
-              className="object-cover group-hover:scale-101 transition-transform duration-500 ease-in-out"
+              className="object-cover group-hover:scale-101 transition-transform duration-500 ease-in-out rounded-2xl border-gray-500 border-3"
             />
           </div>
         ))}

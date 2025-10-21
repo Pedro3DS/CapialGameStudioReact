@@ -18,10 +18,11 @@ export default function Home() {
     <main className="relative min-h-screen text-white font-montserrat selection:bg-amber-600" >
       <LanguageProvider>
         <VideoBackground />
-
-        <div className="relative z-10">
-          <section className="flex flex-col md:flex-row items-center justify-center h-[75vh] md:h-[88vh] px-6 md:px-20 bg-gradient-to-t from-[#333333]/100 from-2% to-black/20 backdrop-blur-sm text-white relative">
-
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#222] from-[0.5vh] via-transparent to-[#111]"></div> */}
+        
+        <div className="relative z-10" id='Home'>
+          <section className="flex flex-col md:flex-row items-center justify-center h-[75vh] md:h-[88vh] px-6 md:px-20 bg-gradient-to-b from-[#000] from-[0.5vh] via-transparent to-[#333] text-white relative">
+            
             <div className="flex flex-col justify-center w-full md:w-4/5 lg:w-3/4 xl:w-2/3 space-y-6">
               {/* Texto Rotativo Circular */}
               <RotatingText
@@ -82,11 +83,11 @@ export default function Home() {
                   >Instagram</span>
                 </div>
                 <div className="group relative inline-block">
-                  <a className="focus:outline-none" href='https://www.instagram.com/capialgamestudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+                  <a className="focus:outline-none" href='https://www.youtube.com/@CapialGameStudio'
                     target='_blank'>
                     <svg
                       viewBox="0 0 16 16"
-                      className="bi bi-youtube transform transition-transform duration-300 hover:scale-125 hover:text-pink-500"
+                      className="bi bi-youtube transform transition-transform duration-300 hover:scale-125"
                       fill="currentColor"
                       height="30"
                       width="30"

@@ -66,7 +66,7 @@ export const texts: Record<Idioma, any> = {
     contact: {
       title: "CONTATO",
       subtitle: "Vamos Trabalhar Juntos",
-      text1: "Para parcerias ou projetos, entre em contato por Email :",
+      text1: "Para parcerias ou projetos, entre em contato por Email",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -208,7 +208,7 @@ export const texts: Record<Idioma, any> = {
     contact: {
       title: "CONTACTO",
       subtitle: "Trabajemos Juntos",
-      text1: "Para asociaciones o proyectos, contáctanos por Email:",
+      text1: "Para asociaciones o proyectos, contáctanos por Email",
     },
     footer: {
       rights: "Todos los derechos reservados.",

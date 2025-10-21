@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Icon from '../../../public/CapialLogoSquare-removebg-preview.png'
 import LanguageSelector from './LanguageSelector'
 import { useLanguage } from "../i18n/LanguageContext"
+import Link from 'next/link'
 
 
 export default function StickyNavbar() {
@@ -44,20 +45,20 @@ export default function StickyNavbar() {
           </svg>
         </button>
         {/* Links da esquerda */}
-        <a href="#aboutUs" className={`selection:bg-amber-600 relative hidden md:inline-block text-lg font-bold transition-all
+        <Link href="#aboutUs" rel="noopener noreferrer" className={`selection:bg-amber-600 relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'} `}>
           {t.text1}
-        </a>
-        <a href="#projects" className={`relative hidden md:inline-block text-lg font-bold transition-all
+        </Link>
+        <Link href="#projects" rel="noopener noreferrer" className={`relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
           {t.text2}
-        </a>
+        </Link>
 
 
         {/* Logo central */}
@@ -66,30 +67,33 @@ export default function StickyNavbar() {
           animate={{ scale: isSticky ? 0.6 : 1, y: isSticky ? 0 : -8 }}
           transition={{ duration: 0.4 }}
         >
-          <Image
-            src={Icon}
-            alt="Capial Logo"
-            priority
-            className={`relative w-25 h-auto cursor-pointer transition filter duration-500 ease-in hover:invert ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}
-          />
+          <Link href="#Home" rel="noopener noreferrer">
+
+            <Image
+              src={Icon}
+              alt="Capial Logo"
+              priority
+              className={`relative w-25 h-auto cursor-pointer transition filter duration-500 ease-in hover:invert ${isSticky ? 'translate-y-0' : '-translate-y-3'}`}
+            />
+          </Link>
         </motion.div>
 
         {/* Links da direita */}
-        <a href="#team" className={`relative hidden md:inline-block text-lg font-bold transition-all
+        <Link href="#team" rel="noopener noreferrer" className={`relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'}`}>
           {t.text3}
-        </a>
+        </Link>
 
-        <a href="#contact" className={`relative hidden md:inline-block  text-lg font-bold  transition-all
+        <Link href="#contact" rel="noopener noreferrer" className={`relative hidden md:inline-block  text-lg font-bold  transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'} `}>
           {t.text4}
-        </a>
+        </Link>
         {/* MENU MOBILE */}
 
         <div>

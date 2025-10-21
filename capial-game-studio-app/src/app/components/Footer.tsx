@@ -8,7 +8,7 @@ export default function Footer() {
     const t = textos.footer
     return (
         <footer className="bg-white shadow-sm dark:bg-[#111]">
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div className="w-full max-w-6xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="#" className="flex items-center justify-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <Image
@@ -25,6 +25,7 @@ export default function Footer() {
                         {/* Whatsapp */}
                         <li>
                             <button
+                                onClick={() => window.open("https://api.whatsapp.com/send?phone=5567996227115", "_blank")}
                                 className="mx-1 p-4 rounded-full backdrop-blur-lg border border-green-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-green-500/30 hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-green-500/50 hover:bg-gradient-to-tr hover:from-green-500/10 hover:to-black/40 group relative overflow-hidden"
                             >
                                 <div
@@ -41,6 +42,7 @@ export default function Footer() {
                         {/* TikTok */}
                         <li>
                             <button
+                                onClick={() => window.open("https://www.tiktok.com/@capialgamestudio?lang=pt", "_blank")}
                                 className="mx-1 p-4 rounded-full backdrop-blur-lg border border-cyan-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-cyan-500/50 hover:bg-gradient-to-tr hover:from-cyan-500/10 hover:to-black/40 group relative overflow-hidden"
                             >
                                 <div
@@ -58,6 +60,7 @@ export default function Footer() {
                         {/* Instagram */}
                         <li>
                             <button
+                                onClick={() => window.open("https://www.instagram.com/capialgamestudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", "_blank")}
                                 className="mx-1 p-4 rounded-full backdrop-blur-lg border border-pink-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-pink-500/30 hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-pink-500/50 hover:bg-gradient-to-tr hover:from-pink-500/10 hover:to-black/40 group relative overflow-hidden"
                             >
                                 <div
@@ -73,6 +76,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <button
+                                onClick={() => window.open("https://www.youtube.com/@CapialGameStudio", "_blank")}
                                 className="mx-1 p-4 rounded-full backdrop-blur-lg border border-red-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-red-500/30 hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-red-500/50 hover:bg-gradient-to-tr hover:from-red-500/10 hover:to-black/40 group relative overflow-hidden"
                             >
                                 <div

@@ -9,7 +9,7 @@ export default function Contact() {
     const { idioma, setIdioma, textos } = useLanguage()
     const t = textos.contact
     return (
-        <section id="contact" className="relative w-full text-white pt-16 h-[600px] md:h-[500px]">
+        <section id="contact" className="relative w-full text-white pt-16 h-[700px] md:h-[600px]">
             {/* BACKGROUND */}
             <Balatro
                 color1="#0F0F0F"
@@ -23,24 +23,26 @@ export default function Contact() {
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#222] from-[0.5vh] via-transparent to-[#111]"></div>
 
             {/* CONTEÚDO */}
-            <div className="relative max-w-6xl mx-auto px-6 z-10 justify-center gap-10 h-full ">
-                <div className="w-full bg-[#0F0F0F]/20 rounded-2xl backdrop-blur-sm text-center py-5">
+            <div className="relative max-w-6xl mx-auto z-10 justify-center gap-10 h-full ">
+                <div className="w-full bg-[#0F0F0F]/60 rounded-2xl backdrop-blur-sm text-center p-[60px]">
                     <TextType
                         text={["Olá !", "Hello !", "Hola !", "Bonjour !"]}
                         typingSpeed={75}
                         pauseDuration={1500}
                         showCursor={true}
                         cursorCharacter="|"
-                        className="text-[5vh] md:text-[20vh] lg:text-[5vh] 2xl:text-[10vh] 3xl:text-[2vh] font-bold text-center uppercase "
+                        className="text-[5vh] md:text-[20vh] lg:text-[5vh] 2xl:text-[5vh] 3xl:text-[2vh] font-bold text-center uppercase "
                     />
                     {/* <h3 className="text-[5vh] md:text-[20vh] lg:text-[5vh] 2xl:text-[10vh] 3xl:text-[2vh] font-bold text-center uppercase ">Olá</h3> */}
-                    <h3 className="text-[3vh] md:text-[20vh] lg:text-[5vh] 2xl:text-[10vh] 3xl:text-[2vh] font-bold text-center uppercase ">{t.subtitle}</h3>
+                    <h3 className="text-[3vh] md:text-[20vh] lg:text-[5vh] 2xl:text-[5vh] 3xl:text-[2vh] font-bold text-center uppercase text-[#d97706] text-shadow-2xs text-shadow-sky-300" style={{
+                        textShadow: "0 0 15px rgba(255, 155, 40, 0.8)",
+                    }}>{t.subtitle}</h3>
 
                     <div className="w-full flex flex-row justify-center items-center my-10">
 
-                        <div className="h-1 w-1/2 bg-linear-65 from-red-500 via-amber-400 to-red-200"></div>
+                        <div className="h-1 w-1/3 bg-linear-65 from-red-500 via-amber-400 to-red-200"></div>
                         <h1 className="text-[5vh] mx-3 w-auto font-bold text-center uppercase ">{t.title}</h1>
-                        <div className="h-1 w-1/2 bg-linear-65 from-red-200 via-amber-400 to-red-500"></div>
+                        <div className="h-1 w-1/3 bg-linear-65 from-red-200 via-amber-400 to-red-500"></div>
                     </div>
                     <div className="w-full space-y-4 text-lg text-justify md:flex gap-10 items-center justify-center">
                         <div className="w-full md:w-1/4 ">
