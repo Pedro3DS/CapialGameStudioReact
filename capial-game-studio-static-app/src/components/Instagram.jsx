@@ -1,0 +1,70 @@
+'use client'
+
+// import Image from "next/image"
+import ScrollVelocity from "../blocks/TextAnimations/ScrollVelocity/ScrollVelocity"
+import Image1 from "/GateballBrasilDirect.jpg"
+import Image2 from "/TwoGirls.jpg"
+import Image4 from "/Gamescom 3.jpg"
+import Image5 from "/Gamescom 1.jpg"
+import Image6 from "/Gamescom 2.jpg"
+import Image8 from "/Gamescom 4.jpg"
+import InstagramIcon from "/icons8-instagram-512.png"
+import { useLanguage } from "../i18n/LanguageContext"
+
+export default function Instagram() {
+  const images = [Image4, Image5, Image1, Image2, Image6, Image8]
+  const links = [
+    "https://www.instagram.com/p/DJRd5FnxRMk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/DJRd5FnxRMk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/DIehlvtOVNM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/DIE9CMdSLRJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/DJRd5FnxRMk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/DJRd5FnxRMk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  ]
+  const { idioma, setIdioma, textos } = useLanguage()
+  const t = textos.instagram
+
+  return (
+    <section id="instagram" className="w-full bg-black text-white py-16">
+      <ScrollVelocity
+        texts={[t.scrollText1]}
+        velocity={50}
+        className="custom-scroll-text text-2xl mb-2"
+      />
+
+      {/* GRID RESPONSIVO (sem scroll) */}
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-full h-[35vh]">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className="relative w-full h-full overflow-hidden group"
+          >
+            <a
+              href={links[index]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 bg-transparent backdrop-blur-sm flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-800 z-10 "
+            >
+              <img
+                src={InstagramIcon}
+                alt="Instagram"
+                width="auto"
+                height="auto"
+                className=""
+              />
+            </a>
+
+            {/* Foto real */}
+            <img
+              src={img}
+              alt={`Instagram image ${index + 1}`}
+              fill
+              className="object-cover group-hover:scale-101 transition-transform duration-500 ease-in-out rounded-2xl border-gray-500 border-3"
+            />
+          </div>
+        ))}
+      </div>
+
+    </section>
+  )
+}
