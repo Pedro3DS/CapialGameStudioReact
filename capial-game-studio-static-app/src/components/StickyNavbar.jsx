@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Icon from '/CapialLogoSquare-removebg-preview.png'
 import LanguageSelector from './LanguageSelector'
 import { useLanguage } from "../i18n/LanguageContext"
+import { scrollToSection } from './scrollToSection'
 
 
 export default function StickyNavbar() {
@@ -43,14 +44,14 @@ export default function StickyNavbar() {
           </svg>
         </button>
         {/* Links da esquerda */}
-        <a href="#aboutUs" rel="noopener noreferrer" className={`selection:bg-amber-600 relative hidden md:inline-block text-lg font-bold transition-all
+        <a onClick={() => scrollToSection("aboutUs", 10)} rel="noopener noreferrer" className={ ` cursor-pointer selection:bg-amber-600 relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
     hover:before:scale-x-100 ${isSticky ? 'translate-y-0 text-gray-300' : '-translate-y-3 text-white'} `}>
           {t.text1}
         </a>
-        <a href="#projects" rel="noopener noreferrer" className={`relative hidden md:inline-block text-lg font-bold transition-all
+        <a onClick={() => scrollToSection("projects", 50)} rel="noopener noreferrer" className={`cursor-pointer relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
@@ -77,7 +78,7 @@ export default function StickyNavbar() {
         </motion.div>
 
         {/* Links da direita */}
-        <a href="#team" rel="noopener noreferrer" className={`relative hidden md:inline-block text-lg font-bold transition-all
+        <a onClick={() => scrollToSection("team", 10)} rel="noopener noreferrer" className={`cursor-pointer relative hidden md:inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
@@ -85,7 +86,7 @@ export default function StickyNavbar() {
           {t.text3}
         </a>
 
-        <a href="#contact" rel="noopener noreferrer" className={`relative hidden md:inline-block  text-lg font-bold  transition-all
+        <a onClick={() => scrollToSection("contact", 50)} rel="noopener noreferrer" className={`cursor-pointer relative hidden md:inline-block  text-lg font-bold  transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[2px] before:w-full before:bg-gradient-to-r before:from-red-500 before:to-white hover:before:via-amber-400 hover:before:to-red-200
     before:scale-x-50 before:origin-left before:transition-transform before:duration-300
