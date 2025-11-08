@@ -112,11 +112,11 @@ export default function Team() {
                         </h1>
                     </div>
 
-                    <div className="horizontal-scroll w-full md:w-auto h-auto gap-6 ps-6 py-2 flex space-y-4 text-lg text-justify overflow-x-auto">
+                    <div className="horizontal-scroll w-full md:w-auto h-auto gap-6 ps-6 py-2 pb-0 md:pb-0 flex space-y-4 text-lg text-justify overflow-x-auto">
                         {team.map((member, i) => (
                             <div
                                 key={i}
-                                className="w-full md:min-w-[300px] md:max-w-[350px] h-[85vh] bg-white/5 border border-white/10 rounded-2xl p-4 flex-shrink-0 hover:scale-[1.02] transition-all duration-300 backdrop-blur-md shadow-md"
+                                className="w-full md:min-w-[300px] md:max-w-[350px] h-[92vh] md:h-[85vh] bg-white/5 border border-white/10 rounded-2xl p-4 flex-shrink-0 hover:scale-[1.02] transition-all duration-300 backdrop-blur-md shadow-md"
                             >
                                 <div className="relative group w-full overflow-hidden rounded-xl">
                                     <img

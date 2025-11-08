@@ -12,7 +12,7 @@ export default function StickyNavbar() {
   const [isSticky, setIsSticky] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { idioma, setIdioma, textos } = useLanguage()
+  const {textos } = useLanguage()
   const t = textos.nav
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function StickyNavbar() {
     <motion.nav
       className={`w-full z-50 transition-all duration-0 ${isSticky
         ? 'fixed top-0 bg-gradient-to-t to-black/50 from-[#333333]/50 backdrop-blur-md shadow-lg'
-        : 'relative bg-gradient-to-t from-black to-[#333333]'
+        : 'relative bg-linear-to-b from-black/50 to-black backdrop-blur-xl backdrop-brightness-150'
         }`}
     >
       <div className="max-w-2xl mx-auto flex items-center justify-between px-6 py-2 md:py-0 font-sans transition-all ">

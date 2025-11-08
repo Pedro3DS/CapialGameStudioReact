@@ -7,8 +7,31 @@ import { useLanguage } from "../i18n/LanguageContext"
 
 export default function Projects() {
 
-  const { idioma, setIdioma, textos } = useLanguage()
+  const {textos } = useLanguage()
   const t = textos.projects
+
+  // Dados dos projetos
+  const projects = [
+    {
+      image: PantanalCode,
+      name: "Pantanal Code",
+      color: "#10566A", // cor principal
+      link: "#pantanal", // link do botão
+    },
+    {
+      image: Gateball,
+      name: "Gateball",
+      color: "#A00030",
+      link: "#gateball",
+    },
+    {
+      image: CerradoVivo,
+      name: "Cerrado Vivo",
+      color: "#78AE3A",
+      link: "#cerrado",
+    },
+  ]
+
   return (
     <section id="projects" className="w-full bg-gradient-to-b from-black via-[#222] to-[#333] text-white pb-6">
       <div className="max-w-6xl mx-auto px-6">
@@ -17,35 +40,73 @@ export default function Projects() {
 
         <div className="h-1 w-[50%] ms-[50%] bg-linear-65 from-red-200 via-amber-400 to-red-500"></div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 mt-18">
-          <div className="w-full md:w-1/3 flex justify-center relative group md:hover:-mt-5 md:hover:pb-5 ease-in-out duration-100">
-            <img
-              src={PantanalCode}
-              alt="Capial Logo"
-              priority
-              className={` object-cover transition-all ease-in rounded-xl duration-200 cursor-pointer drop-shadow-xl drop-shadow-[#10566A]/50  hover:drop-shadow-2xl hover:drop-shadow-[#10566A]/100`}
-            />
-          </div>
-          <div className="w-full md:w-1/3 flex justify-center md:hover:-mt-5 md:hover:pb-5 ease-in-out duration-100">
+        {/* GRID */}
+        <div className="flex flex-col md:flex-row items-center gap-10 mt-16">
+          {projects.map((p, i) => (
+            <div
+              key={i}
+              className="relative group w-full md:w-1/3 flex justify-center transition-all duration-700 ease-out cursor-pointer overflow-hidden rounded-xl hover:-translate-y-3"
+              style={{ boxShadow: `0 0 20px ${p.color}60` }}
+            >
+              {/* IMAGEM */}
+              <img
+                src={p.image}
+                alt={p.name}
+                className="w-full h-auto rounded-xl object-cover transition-all duration-700 ease-out transform group-hover:scale-[1.05]"
+              />
 
-            <img
-              src={Gateball}
-              alt="Capial Logo"
-              priority
-              className={` object-cover transition-all ease-in rounded-xl duration-200 cursor-pointer drop-shadow-xl drop-shadow-[#A00030]/50  hover:drop-shadow-2xl hover:drop-shadow-[#A00030]/100 `}
-            />
-          </div>
-          <div className="w-full md:w-1/3 flex justify-center md:hover:-mt-5 md:hover:pb-5 ease-in-out duration-100">
-            <img
-              src={CerradoVivo}
-              alt="Capial Logo"
-              priority
-              className={` object-cover transition-all ease-in rounded-xl duration-200 cursor-pointer drop-shadow-xl drop-shadow-[#D4D8A0]/50  hover:drop-shadow-2xl hover:drop-shadow-[#D4D8A0]/100`}
-            />
-          </div>
+              {/* CARD DE INFORMAÇÃO */}
+              <div
+                className="absolute bottom-0 w-full flex flex-row justify-between items-end p-6 text-left opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out"
+                style={{
+                  background: `linear-gradient(to top, ${p.color}dd 15%, transparent 80%)`,
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                  maskImage: "linear-gradient(to top, black 70%, transparent 100%)",
+                }}
+              >
+                <h2 className="text-2xl font-bold text-white drop-shadow-lg">{p.name}</h2>
 
+                {/* BOTÃO ESTILIZADO */}
+                <a
+                  href={p.link}
+                  className="p-1 rounded-full backdrop-blur-lg bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer group relative overflow-hidden"
+                  style={{
+                    border: `1px solid ${p.color}60`,
+                    boxShadow: `0 0 10px ${p.color}60`,
+                  }}
+                >
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
+                  ></div>
 
+                  <div className="relative z-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill={p.color}
+                      className="bi bi-instagram w-7 h-7 transition-colors duration-300 group-hover:brightness-150"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+
+              {/* BRILHO SUTIL */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-all duration-700 ease-out pointer-events-none"
+                style={{
+                  background: `radial-gradient(circle at 50% 80%, ${p.color}40 0%, transparent 70%)`,
+                  mixBlendMode: "screen",
+                }}
+              ></div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   )

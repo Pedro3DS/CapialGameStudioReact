@@ -8,7 +8,7 @@ import "./index.css"
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename="/New">
-      <Routes>
+      <Routes >
         <Route path="/" element={<App />} />
 
         <Route path="/churusbango" element={<About />} />

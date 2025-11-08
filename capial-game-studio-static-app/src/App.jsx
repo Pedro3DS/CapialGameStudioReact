@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import VideoBackground from './components/VideoBackground'
 import StickyNavbar from './components/StickyNavbar'
 import { LanguageProvider } from './i18n/LanguageContext';
@@ -9,16 +8,17 @@ import Team from './components/Team'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Home from './components/Home';
+import HomeStatic from './components/HomeStatic';
 
 function App() {
   return (
     <main className="relative min-h-screen text-white font-montserrat selection:bg-amber-600" >
       <LanguageProvider>
         <VideoBackground />
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#222] from-[0.5vh] via-transparent to-[#111]"></div> */}
-
         <div className="relative z-10" id='Home'>
-          <Home/>
+      
+          <HomeStatic />
+          <Home />
           <StickyNavbar />
           <AboutUs />
           <Instagram />

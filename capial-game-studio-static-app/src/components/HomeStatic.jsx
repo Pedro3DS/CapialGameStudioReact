@@ -1,56 +1,41 @@
 'use client'
 
-import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText"
-export default function Home() {
+import { useLanguage } from "../i18n/LanguageContext"
+
+
+export default function HomeStatic() {
+    const { idioma, setIdioma, textos } = useLanguage()
+      const t = textos.home
     return (
-        <section className="flex flex-col md:flex-row items-center justify-center h-[75vh] md:h-[88vh] px-6 md:px-20 text-white relative -z-5 " id="#home">
+        <section className="fixed top-0 left-0 right-0 flex flex-col md:flex-row items-center justify-center h-full w-full px-6 md:px-20 bg-gradient-to-b from-transparent via-[#000] via-[90vh] to-[#111] backdrop-blur-sm/50 text-white -z-1" id="#home">
 
-            {/* <div className="flex flex-col justify-center w-full md:w-4/5 lg:w-3/4 xl:w-2/3 space-y-6">
-    
-
-                <RotatingText
-                    texts={['Bem-Vindo!', 'Welcome!', '¡Bienvenido!', 'Bienvenue!']}
-                    mainClassName="text-5xl font-bold text-white py-2 rounded-lg inline-block"
-                    staggerFrom={"last"}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-120%" }}
-                    staggerDuration={0.025}
-                    splitLevelClassName="overflow-hidden pb-1"
-                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                    rotationInterval={2000}
-                />
-
+            <div className="flex flex-col justify-center w-full md:w-4/5 lg:w-3/4 xl:w-2/3 space-y-6">
+                <h1 className="text-3xl md:text-5xl  font-bold text-white py-2 rounded-lg inline-block uppercase">{t.title}</h1>
 
                 <div className="flex items-baseline text-2xl md:text-3xl font-semibold text-white">
-                    <RotatingText
-                        texts={["Á", "To", "A", "À"]}
-                        mainClassName="font-bold text-white rounded-lg inline-block"
-                        staggerFrom={"last"}
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "-120%" }}
-                        staggerDuration={0.025}
-                        splitLevelClassName="overflow-hidden pb-1"
-                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                        rotationInterval={2000}
-                    />
+                    <p className="font-bold text-white rounded-lg inline-block">{t.subTitle}</p>
                     <span className="ml-2 text-amber-400" style={{
                         textShadow: "0 0 15px rgba(255, 155, 40, 0.8)",
                     }} > Capial Game Studio</span>
 
 
                 </div>
+                <div className="relative hidden md:inline-block text-lg font-bold transition-all
+    before:content-[''] before:absolute before:left-0 before:bottom-0
+    before:h-[3px] before:w-full before:bg-linear-to-r before:from-red-500 before:to-white before:via-amber-400 before:to-red-200
+    before:scale-x-50 before:origin-left before:transition-transform before:duration-300
+    "></div>
 
-        
+                {/* Ícones Sociais */}
 
-                <div className="flex space-x-6 mt-6">
+                <div className="flex space-x-6 mt-2">
                     <div className="group relative inline-block">
                         <a className="focus:outline-none" href='https://www.instagram.com/capialgamestudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
                             target='_blank'>
                             <svg
                                 viewBox="0 0 16 16"
-                                className="bi bi-instagram transform transition-transform duration-300 hover:scale-125 hover:text-linear-65 from-purple-500 to-pink-500"
+                                className="bi bi-instagram transform transition-transform duration-300 hover:scale-125 hover:text-pink-500 from-purple-500 to-pink-500"
+
                                 fill="currentColor"
                                 height="30"
                                 width="30"
@@ -71,7 +56,7 @@ export default function Home() {
                             target='_blank'>
                             <svg
                                 viewBox="0 0 16 16"
-                                className="bi bi-youtube transform transition-transform duration-300 hover:scale-125"
+                                className="bi bi-youtube transform transition-transform duration-300 hover:text-red-500 hover:scale-125"
                                 fill="currentColor"
                                 height="30"
                                 width="30"
@@ -90,6 +75,11 @@ export default function Home() {
 
 
                 </div>
+            </div>
+            {/* <div className="">
+                <FloatingBubble logo={GateImage} color="#fff" size={160} top="40%" left="67%" />
+                <FloatingBubble logo={Pantanal} color="#818A6A" size={120} top="25%" left="62%" />
+                <FloatingBubble logo={Cerrado} color="#AF5E0A" size={130} top="25%" left="75%" />
             </div> */}
 
 

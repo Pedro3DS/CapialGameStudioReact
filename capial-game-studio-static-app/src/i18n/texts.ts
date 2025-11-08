@@ -15,6 +15,10 @@ export const texts: Record<Idioma, any> = {
       text3: "Espanhol",
       text4: "Francês",
     },
+    home:{
+      title: "Bem-Vindo!",
+      subTitle: "Á",
+    },
     aboutUs: {
       title: "SOBRE NÓS",
       altImage: "Foto do Time Capial",
@@ -86,6 +90,10 @@ export const texts: Record<Idioma, any> = {
       text3: "Spanish",
       text4: "French",
     },
+     home:{
+      title: "Welcome!",
+      subTitle: "To",
+    },
     aboutUs: {
       title: "ABOUT US",
       altImage: "Capial Team Photo",
@@ -98,7 +106,7 @@ export const texts: Record<Idioma, any> = {
       button: "Learn More",
     },
     instagram: {
-      scrollText1: "Follow ✦ Us ✦ Follow ✦ Us ✦ Follow ✦ Us ✦",
+      scrollText1: "Our Instagram ✨ Our Instagram ✨ Our Instagram ✨ Our Instagram ✨ ",
       scrollText2: "On ✦ Instagram ✦ On ✦ Instagram ✦ On ✦ Instagram ✦",
     },
     team: {
@@ -157,6 +165,10 @@ export const texts: Record<Idioma, any> = {
       text3: "Español",
       text4: "Francés",
     },
+     home:{
+      title: "¡BIENVENIDO!",
+      subTitle: "A",
+    },
     aboutUs: {
       title: "SOBRE NOSOTROS",
       altImage: "Foto del Equipo Capial",
@@ -169,7 +181,7 @@ export const texts: Record<Idioma, any> = {
       button: "Saber Más",
     },
     instagram: {
-      scrollText1: "Síguenos ✦ Síguenos ✦ Síguenos ✦",
+      scrollText1: "Nuestro Instagram ✨ Nuestro Instagram ✨ Nuestro Instagram ✨ Nuestro Instagram ✨ ",
       scrollText2: "En ✦ Instagram ✦ En ✦ Instagram ✦ En ✦ Instagram ✦",
     },
     team: {
@@ -228,6 +240,10 @@ export const texts: Record<Idioma, any> = {
       text3: "Espagnol",
       text4: "Français",
     },
+     home:{
+      title: "Bienvenue!",
+      subTitle: "À",
+    },
     aboutUs: {
       title: "À PROPOS",
       altImage: "Photo de l'équipe Capial",
@@ -240,7 +256,7 @@ export const texts: Record<Idioma, any> = {
       button: "En savoir plus",
     },
     instagram: {
-      scrollText1: "Suivez-nous ✦ Suivez-nous ✦ Suivez-nous ✦",
+      scrollText1: "Notre Instagram ✨ Notre Instagram ✨ Notre Instagram ✨ Notre Instagram ✨ ",
       scrollText2: "Sur ✦ Instagram ✦ Sur ✦ Instagram ✦ Sur ✦ Instagram ✦",
     },
     team: {
