@@ -9,6 +9,18 @@ import Image6 from "/Gamescom 2.jpg"
 import Image8 from "/Gamescom 4.jpg"
 import InstagramIcon from "/icons8-instagram-512.png"
 import { useLanguage } from "../i18n/LanguageContext"
+import LogoLoop from '../blocks/Animations/LogoLoop/LogoLoop';
+import big from "/BigGateballLogo.jpeg"
+
+
+// Alternative with image sources
+const imageLogos = [
+  { src: {big}, alt: "Company 1", href: "https://company1.com" },
+  { src: {big}, alt: "Company 1", href: "https://company1.com" },
+  { src: {big}, alt: "Company 1", href: "https://company1.com" },
+  // { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
+  // { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
+];
 
 export default function Instagram() {
   const images = [Image4, Image5, Image1, Image2, Image6, Image8]
@@ -85,6 +97,23 @@ export default function Instagram() {
           </div>
         ))}
       </div>
+
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 w-full px-4">
+        <LogoLoop
+          logos={imageLogos}
+          speed={120}
+          direction="left"
+          logoHeight={48}
+          gap={40}
+          pauseOnHover
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#ffffff"
+          ariaLabel="Technology partners"
+        />
+      </div>
+      
+
     </section>
   )
 }

@@ -20,10 +20,10 @@ export default function HomeStatic() {
 
 
                 </div>
-                <div className="relative hidden md:inline-block text-lg font-bold transition-all
+                <div className="relative inline-block text-lg font-bold transition-all
     before:content-[''] before:absolute before:left-0 before:bottom-0
     before:h-[3px] before:w-full before:bg-linear-to-r before:from-red-500 before:to-white before:via-amber-400 before:to-red-200
-    before:scale-x-50 before:origin-left before:transition-transform before:duration-300
+    before:scale-x-50 md:before:scale-x-40 before:origin-left before:transition-transform before:duration-300
     "></div>
 
                 {/* Ícones Sociais */}
