@@ -1,0 +1,20 @@
+.instaloop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.instaloop-track {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+  transition: transform 0.2s linear;
+}
+
+.instaloop-track > div {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}

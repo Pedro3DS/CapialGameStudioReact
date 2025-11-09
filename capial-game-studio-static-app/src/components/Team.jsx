@@ -19,7 +19,7 @@ export default function Team() {
             name: "Mauricio de Souza Estevam",
             role: t.mauricio.role,
             description: t.mauricio.description,
-                // "Programador e especialista em game design com vasta experiência no desenvolvimento de soluções tecnológicas inovadoras. Fundador da Capial, lidera projetos que integram criatividade e excelência técnica. Professor de jogos digitais, combina sua paixão por jogos com um compromisso em formar talentos e impulsionar o setor.",
+            // "Programador e especialista em game design com vasta experiência no desenvolvimento de soluções tecnológicas inovadoras. Fundador da Capial, lidera projetos que integram criatividade e excelência técnica. Professor de jogos digitais, combina sua paixão por jogos com um compromisso em formar talentos e impulsionar o setor.",
             image: Mauricio,
             instagram: "https://www.instagram.com/mauriiciosouza/",
             username: "mauriiciosouza",
@@ -29,7 +29,7 @@ export default function Team() {
             name: "Gabriel Medeiros",
             role: t.gabriel.role,
             description: t.gabriel.description,
-                // "Profissional multifacetado com expertise em design gráfico, interfaces e ambientes. Especialista em VFX, combina criatividade e precisão técnica para criar visuais impactantes. Líder em projetos artísticos, entrega experiências imersivas e inovadoras.",
+            // "Profissional multifacetado com expertise em design gráfico, interfaces e ambientes. Especialista em VFX, combina criatividade e precisão técnica para criar visuais impactantes. Líder em projetos artísticos, entrega experiências imersivas e inovadoras.",
             image: Gabriel,
             instagram: "https://www.instagram.com/biel_dc/",
             username: "biel_dc",
@@ -39,7 +39,7 @@ export default function Team() {
             name: "Pedro Diniz",
             role: t.pedro.role,
             description: t.pedro.description,
-                // "Programador versátil com expertise em Unity e desenvolvimento web. Cria sistemas robustos para web e jogos, garantindo alta performance. Entrega resultados consistentes que impulsionam qualidade e funcionalidade em diversos ambientes tecnológicos.",
+            // "Programador versátil com expertise em Unity e desenvolvimento web. Cria sistemas robustos para web e jogos, garantindo alta performance. Entrega resultados consistentes que impulsionam qualidade e funcionalidade em diversos ambientes tecnológicos.",
             image: PedroImg,
             instagram: "https://www.instagram.com/pedro_3ds/",
             username: "pedro_3ds",
@@ -49,7 +49,7 @@ export default function Team() {
             name: "Gabriel Barberiz",
             role: t.barba.role,
             description: t.barba.description,
-                // "Responsável por criar experiências imersivas e narrativas cativantes. Une escrita criativa e design de jogo para construir universos ricos e envolventes.",
+            // "Responsável por criar experiências imersivas e narrativas cativantes. Une escrita criativa e design de jogo para construir universos ricos e envolventes.",
             image: Barba,
             instagram: "https://www.instagram.com/barba_game/",
             username: "barba_game",
@@ -59,7 +59,7 @@ export default function Team() {
             name: "Felipe Dôza",
             role: t.felipe.role,
             description: t.felipe.description,
-                // "Especializado em design de cenários, efeitos visuais e HUD, com foco na experiência do jogador. Cria visuais envolventes e funcionais que elevam a narrativa e imersão em projetos digitais.",
+            // "Especializado em design de cenários, efeitos visuais e HUD, com foco na experiência do jogador. Cria visuais envolventes e funcionais que elevam a narrativa e imersão em projetos digitais.",
             image: Felipe,
             instagram: "https://www.instagram.com/felipe_dozaa/",
             username: "felipe_dozaa",
@@ -100,7 +100,7 @@ export default function Team() {
         <section id="team" className="w-full bg-linear-to-b from-[#333] to-[#222] text-white py-20">
 
             <div className="max-w-6xl mx-auto px-6 h-auto">
-                <div className="flex flex-col md:flex-row items-center gap-10">
+                <div className="relative flex flex-col md:flex-row items-center gap-10">
                     <div className="flex w-1/4 flex-col md:flex-row items-center justify-center mb-10">
                         <div className="hidden md:flex flex-col text-[20vh] font-bold uppercase leading-[1]">
                             <span>E</span>
@@ -112,7 +112,12 @@ export default function Team() {
                         </h1>
                     </div>
 
-                    <div className="horizontal-scroll w-full md:w-auto h-auto gap-6 ps-6 py-2 pb-0 md:pb-0 flex space-y-4 text-lg text-justify overflow-x-auto">
+                    <div className="relative bg-linear-to-l from-orange-400/50 rounded-2xl to-transparent to-[5vh] horizontal-scroll w-full md:w-auto h-auto gap-6 ps-6 py-2 pb-0
+                    md:pb-0 flex space-y-4 text-lg text-justify overflow-x-auto scroll-team
+                    scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800
+                 
+                    
+                    ">
                         {team.map((member, i) => (
                             <div
                                 key={i}
@@ -156,6 +161,7 @@ export default function Team() {
                             </div>
                         ))}
                     </div>
+
                 </div>
             </div>
         </section>

@@ -27,3 +27,44 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll linear infinite;
+  display: flex;
+  will-change: transform;
+}
+
+.scroll-team {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* track */
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+
+  /* handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    /* Tailwind gray-600 */
+    border-radius: 9999px;
+  }
+
+  /* handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+    /* Tailwind gray-500 */
+  }
+}
