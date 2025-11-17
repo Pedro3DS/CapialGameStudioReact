@@ -35,12 +35,12 @@ export default function Instagram() {
 
   return (
     <section id="instagram" className="w-full bg-black text-white py-16">
-      {/* Texto rolante */}
-      <ScrollVelocity
-        texts={[t.scrollText1]}
-        velocity={50}
-        className="custom-scroll-text text-2xl mb-8"
-      />
+
+      <div className="w-full flex justify-between items-center mb-8">
+        <div className="h-1 w-full bg-amber-400"></div>
+        <h2 className="text-4xl w-full items-center text-center font-bold">{t.scrollText1}</h2>
+        <div className="h-1 w-full bg-amber-400"></div>
+        </div>
       {/* Grade de imagens */}
       {/* <div className="grid grid-cols-3 md:grid-cols-6 gap-3 w-full px-4">
         {images.map((img, index) => (

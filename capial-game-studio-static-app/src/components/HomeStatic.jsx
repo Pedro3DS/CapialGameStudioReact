@@ -1,22 +1,27 @@
 'use client'
 
 import { useLanguage } from "../i18n/LanguageContext"
-
+import TextPressure from '../blocks/TextAnimations/TextPressure/TextPressure';
 
 export default function HomeStatic() {
     const { idioma, setIdioma, textos } = useLanguage()
-      const t = textos.home
+    const t = textos.home
     return (
         <section className="fixed top-0 left-0 right-0 flex flex-col md:flex-row items-center justify-center h-full w-full px-6 md:px-20 bg-gradient-to-b from-transparent via-[#000] via-[90vh] to-[#111] backdrop-blur-sm/50 text-white -z-1" id="#home">
 
             <div className="flex flex-col justify-center w-full md:w-4/5 lg:w-3/4 xl:w-2/3 space-y-6">
                 <h1 className="text-3xl md:text-5xl  font-bold text-white py-2 rounded-lg inline-block uppercase">{t.title}</h1>
-
                 <div className="flex items-baseline text-2xl md:text-3xl font-semibold text-white">
                     <p className="font-bold text-white rounded-lg inline-block">{t.subTitle}</p>
-                    <span className="ml-2 text-amber-400" style={{
-                        textShadow: "0 0 15px rgba(255, 155, 40, 0.8)",
-                    }} > Capial Game Studio</span>
+                    <span
+                        className="ml-2 text-white font-bold"
+                        style={{
+                         
+                            textShadow: '0 0 10px rgba(255,255,255,0.2)',
+                        }}
+                    >
+                        Capial Game Studio
+                    </span>
 
 
                 </div>

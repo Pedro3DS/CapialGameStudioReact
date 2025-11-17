@@ -31,7 +31,7 @@ export const texts: Record<Idioma, any> = {
       button: "Saiba Mais",
     },
     instagram: {
-      scrollText1: "Nosso Instagram ✨ Nosso Instagram ✨ Nosso Instagram ✨ Nosso Instagram ✨ ",
+      scrollText1: "Nosso Instagram",
       scrollText2: "No ✦ Instagram ✦ No ✦ Instagram ✦ No ✦ Instagram ✦",
     },
     team: {
@@ -106,7 +106,7 @@ export const texts: Record<Idioma, any> = {
       button: "Learn More",
     },
     instagram: {
-      scrollText1: "Our Instagram ✨ Our Instagram ✨ Our Instagram ✨ Our Instagram ✨ ",
+      scrollText1: "Our Instagram",
       scrollText2: "On ✦ Instagram ✦ On ✦ Instagram ✦ On ✦ Instagram ✦",
     },
     team: {
@@ -181,7 +181,7 @@ export const texts: Record<Idioma, any> = {
       button: "Saber Más",
     },
     instagram: {
-      scrollText1: "Nuestro Instagram ✨ Nuestro Instagram ✨ Nuestro Instagram ✨ Nuestro Instagram ✨ ",
+      scrollText1: "Nuestro Instagram",
       scrollText2: "En ✦ Instagram ✦ En ✦ Instagram ✦ En ✦ Instagram ✦",
     },
     team: {
@@ -256,7 +256,7 @@ export const texts: Record<Idioma, any> = {
       button: "En savoir plus",
     },
     instagram: {
-      scrollText1: "Notre Instagram ✨ Notre Instagram ✨ Notre Instagram ✨ Notre Instagram ✨ ",
+      scrollText1: "Notre Instagram",
       scrollText2: "Sur ✦ Instagram ✦ Sur ✦ Instagram ✦ Sur ✦ Instagram ✦",
     },
     team: {
