@@ -2,8 +2,8 @@ import React from "react";
 import  { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
-import About from "./About.jsx";
 import "./index.css"
+import Gateball from "./pages/Gateball/Gateball.jsx";
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
       <Routes >
         <Route path="/" element={<App />} />
 
-        <Route path="/churusbango" element={<About />} />
+        <Route path="/Gateball" element={<Gateball />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

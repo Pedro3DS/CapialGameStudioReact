@@ -13,7 +13,7 @@ import HomeStatic from './components/HomeStatic';
 function App() {
   return (
     <main className="relative min-h-screen text-white font-montserrat selection:bg-amber-600" >
-      <LanguageProvider>
+      
         <VideoBackground />
         <div className="relative z-10" id='Home'>
       
@@ -28,7 +28,7 @@ function App() {
           <Footer />
 
         </div>
-      </LanguageProvider >
+    
     </main >
   )
 }
