@@ -9,9 +9,12 @@ import ImageBackgroundGames from "../components/ImageBackgroundGames";
 import imageBG from "/GateballImage1.jpeg";
 import imageBG2 from "/GateballImage2.jpeg";
 import imageBG3 from "/Gateball.jpeg";
+import capialImage from "/CapialLogoSquare-removebg-preview.png";
 import logo from "/GateballLogo.jpeg";
 import { LanguageProvider } from "../../i18n/LanguageContext";
 import Balatro from "../../blocks/Backgrounds/Balatro/Balatro";
+
+import video from "/Videos/BgVideo.mp4";
 
 export default function Gateball() {
     return (
@@ -22,11 +25,11 @@ export default function Gateball() {
 
 
                 {/* Overlay */}
-                <div className="fixed inset-0 bg-linear-to-b from-[#333]/60 to-[#990100]/40 backdrop-blur-sm -z-10" />
+                <div className="fixed inset-0 bg-linear-to-b from-[#333]/60 via-[#333]/80 to-[#990100]/40 backdrop-blur-sm -z-10" />
 
                 {/* NAVBAR */}
-                <nav className="w-full z-50 py-4">
-                    <div className="max-w-6xl mx-auto flex items-center justify-center">
+                <nav className="fixed w-full z-50 py-1  backdrop-blur-md">
+                    <div className="max-w-4xl mx-auto flex items-center justify-center">
                         <a href="">Summary</a>
                         <a href="">Target</a>
                         <img
@@ -58,12 +61,21 @@ export default function Gateball() {
                         />
                     </div>
 
-                    <p className="font-bold text-2xl md:text-3xl pb-20 uppercase tracking-[0.25em]" style={{ textShadow: "0 0 15px rgba(255, 155, 40, 0.8)" }}>
+                    <p className="font-bold text-2xl md:text-5xl pb-20 uppercase tracking-[0.25em]" style={{ textShadow: "0 0 15px rgba(185, 005, 004, 0.8)" }}>
                         Memuro Championship
                     </p>
                 </header>
 
+                {/* By */}
+                {/* <div className=" w-full h-10 flex justify-center items-center bg-[#333333] mt-15">
+                    <div className="max-w-6xl mx-auto flex flex-row justify-center items-center -translate-y-5">
+                        <h1 className="w-full h-full text-6xl font-bold text-center">From</h1>
+                        <a href="" className="w-full  h-full" >
 
+                            <img src={capialImage} alt="" className="w-35 h-35 object-contain"/>
+                        </a>
+                    </div>
+                </div> */}
 
                 {/* CONTENT */}
                 <div className="relative z-10 " id="Home">
@@ -82,7 +94,7 @@ export default function Gateball() {
                                     <p className="text-lg leading-relaxed mb-5">
                                         O jogo será projetado para ser acessível a todas as faixas etárias. A ideia é que ele seja livre para qualquer público, mas com um foco especial em tornar a experiência acessível para a terceira idade, garantindo uma interface intuitiva, controles simples e um ritmo de jogo adequado.
                                     </p>
-                                    <p className="text-lg leading-relaxed mb-5">
+                                    <p className="text-lg leading-relaxed mt-5">
                                         Além disso, o design e os elementos visuais incluirão características que despertem o interesse de crianças e jovens, tornando o jogo atrativo para um público mais amplo.
                                     </p>
                                 </div>
@@ -90,24 +102,31 @@ export default function Gateball() {
                         </div>
                     </section>
 
-                    <section className="relative w-full py-10 bg-[#990100]">
+                    <section className="relative w-full py-10 bg-linear-to-b from-[#333333] from-5% to-[#990100] ">
 
-                        <div className="relative max-w-6xl mx-auto">
+                        <div className="relative max-w-6xl mx-auto text-justify">
 
-                            <h1 className="text-4xl font-extrabold mb-6 ">Target Audience</h1>
+                            <h1 className="text-6xl font-extrabold mb-6 ">Target Audience</h1>
+                            <div className="bg-[#990100] w-[60%] h-1 mt-5 mb-8"></div>
                             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
                                 <img
                                     src={imageBG2}
                                     className="rounded-xl shadow-lg object-cover w-full md:w-1/2"
                                 />
-                                <p className="text-lg leading-relaxed">
-                                    Este é um jogo de Gateball multiplayer local para computador…
-                                </p>
+                                <div>
+                                    <p className="text-lg leading-relaxed mb-5">
+                                        Este é um jogo de Gateball multiplayer local para computador, com um estilo visual cartunesco e vibrante, utilizando gráficos estilizados em cell shading. O cenário será fortemente influenciado pela cultura japonesa, incorporando elementos tradicionais ao ambiente.
+                                    </p>
+                                    <p className="text-lg leading-relaxed mt-5">
+                                        A jogabilidade seguirá as regras clássicas do Gateball, proporcionando uma experiência autêntica e dinâmica para os jogadores. O foco será em partidas rápidas e competitivas, incentivando a estratégia e a precisão nos movimentos.
+                                    </p>
+
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    <section className="relative w-full py-10">
+                    <section className="relative w-full h-[80vh] py-10 flex justify-center items-center">
                         <Balatro
                             color1="#333333"
                             color3="#162325"
@@ -118,19 +137,24 @@ export default function Gateball() {
                             className="absolute inset-0 w-full h-full pointer-events-none"
                         />
                         <div className="relative max-w-6xl mx-auto">
+                            <div className="w-full flex justify-center items-center mb-5">
 
-                            <h1 className="text-4xl font-extrabold mb-6">Gameplay Mechanics</h1>
+                                <div className="bg-red-600 w-full h-1"></div>
+                                <h1 className="text-6xl font-extrabold mb-6 text-center w-full uppercase px-15">Gameplay Mechanics</h1>
+                                <div className="bg-red-600 w-full h-1"></div>
+                            </div>
                             <div className="flex flex-col md:flex-row gap-8 items-center">
-
                                 <video
-                                    src="/Videos/BgVideo.mp4"
-                                    className="rounded-xl shadow-lg object-cover w-full md:w-1/2"
+                                    id="backVideo"
                                     autoPlay
-                                    loop
                                     muted
+                                    loop
                                     playsInline
-                                    controls={false}
-                                />
+                                    controls={true}
+                                    className="rounded-xl shadow-lg object-cover w-full md:w-1/2"
+                                >
+                                    <source src={video} type="video/mp4" />
+                                </video>
                                 <p className="text-lg leading-relaxed whitespace-pre-line">
                                     1. Composição das equipes…
                                     {"\n\n"}
