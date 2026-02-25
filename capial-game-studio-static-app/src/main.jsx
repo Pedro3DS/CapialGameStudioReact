@@ -7,11 +7,11 @@ import Gateball from "./pages/Gateball/Gateball.jsx";
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/New">
+    <BrowserRouter basename="/">
       <Routes >
         <Route path="/" element={<App />} />
 
-        <Route path="/Gateball" element={<Gateball />} />
+        {/* <Route path="/Gateball" element={Gateball} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -27,8 +27,8 @@ export default function AboutUs() {
 
           <div className="w-full md:w-1/2 space-y-4 text-lg text-justify">
             <p>{t.text1}</p>
-            <p>{t.text1}</p>
-            <p>{t.text1}</p>
+            <p>{t.text2}</p>
+            <p>{t.text3}</p>
           </div>
         </div>
       </div>

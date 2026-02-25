@@ -103,9 +103,9 @@ export default function Team() {
                 <div className="relative flex flex-col md:flex-row items-center gap-10">
                     <div className="flex w-1/4 flex-col md:flex-row items-center justify-center mb-10">
                         <div className="hidden md:flex flex-col text-[20vh] font-bold uppercase leading-[1]">
-                            <span>E</span>
-                            <span>qui</span>
-                            <span>pe</span>
+                            <span>{t.titleDivided1}</span>
+                            <span>{t.titleDivided2}</span>
+                            <span>{t.titleDivided3}</span>
                         </div>
                         <h1 className="md:hidden text-6xl font-bold uppercase text-center">
                             {t.title}

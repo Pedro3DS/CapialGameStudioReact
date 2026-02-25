@@ -35,6 +35,9 @@ export const texts: Record<Idioma, any> = {
       scrollText2: "No ✦ Instagram ✦ No ✦ Instagram ✦ No ✦ Instagram ✦",
     },
     team: {
+      titleDivided1 : "E",
+      titleDivided2 : "QUI",
+      titleDivided3 : "PE",
       title: "EQUIPE",
       mauricio: {
         name: "Mauricio de Souza Estevam",
@@ -110,6 +113,9 @@ export const texts: Record<Idioma, any> = {
       scrollText2: "On ✦ Instagram ✦ On ✦ Instagram ✦ On ✦ Instagram ✦",
     },
     team: {
+      titleDivided1 : "TE",
+      titleDivided2 : " ",
+      titleDivided3 : "AM",
       title: "TEAM",
       mauricio: {
         name: "Mauricio de Souza Estevam",
@@ -185,6 +191,9 @@ export const texts: Record<Idioma, any> = {
       scrollText2: "En ✦ Instagram ✦ En ✦ Instagram ✦ En ✦ Instagram ✦",
     },
     team: {
+      titleDivided1 : "E",
+      titleDivided2 : "QUI",
+      titleDivided3 : "PO",
       title: "EQUIPO",
       mauricio: {
         name: "Mauricio de Souza Estevam",
@@ -260,6 +269,9 @@ export const texts: Record<Idioma, any> = {
       scrollText2: "Sur ✦ Instagram ✦ Sur ✦ Instagram ✦ Sur ✦ Instagram ✦",
     },
     team: {
+      titleDivided1 : "É",
+      titleDivided2 : "QUI",
+      titleDivided3 : "PE",
       title: "ÉQUIPE",
       mauricio: {
         name: "Mauricio de Souza Estevam",

@@ -4,6 +4,7 @@ import Gateball from "/GateballImage1.jpeg"
 import PantanalCode from "/PantanalCode.jpeg"
 import CerradoVivo from "/CerradoVivo.jpeg"
 import { useLanguage } from "../i18n/LanguageContext"
+import { href } from "react-router-dom"
 
 export default function Projects() {
 
@@ -16,19 +17,19 @@ export default function Projects() {
       image: PantanalCode,
       name: "Pantanal Code",
       color: "#10566A", // cor principal
-      link: "#pantanal", // link do botão
+      link: "https://capialgamestudio.com/PantanalCode/", // link do botão
     },
     {
       image: Gateball,
       name: "Gateball",
       color: "#A00030",
-      link: "#gateball",
+      link: "https://capialgamestudio.com/Gateball/",
     },
     {
       image: CerradoVivo,
       name: "Cerrado Vivo",
       color: "#78AE3A",
-      link: "#cerrado",
+      link: "https://capialgamestudio.com/CerradoVivo/",
     },
   ]
 
@@ -47,6 +48,7 @@ export default function Projects() {
               key={i}
               className="relative group w-full md:w-1/3 flex justify-center transition-all duration-700 ease-out cursor-pointer overflow-hidden rounded-xl hover:-translate-y-3"
               style={{ boxShadow: `0 0 20px ${p.color}60` }}
+              onClick={() => window.open(p.link)}
             >
               {/* IMAGEM */}
               <img
@@ -64,6 +66,7 @@ export default function Projects() {
                   WebkitBackdropFilter: "blur(10px)",
                   maskImage: "linear-gradient(to top, black 70%, transparent 100%)",
                 }}
+                // onClick={() => window.open(p.link, "_blank")}
               >
                 <h2 className="text-2xl font-bold text-white drop-shadow-lg">{p.name}</h2>
 
